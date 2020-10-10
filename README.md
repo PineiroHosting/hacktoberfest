@@ -13,3 +13,5 @@
 ### [PlayAudio](https://github.com/PineiroHosting/hacktoberfest/blob/master/java/PlayAudio.java)
 
 ### [TimeFilter](https://github.com/PineiroHosting/hacktoberfest/blob/master/java/TimeFilter.java)
+
+### [PasswordStrength](https://github.com/PineiroHosting/hacktoberfest/blob/master/java/PasswordStrength.java)
