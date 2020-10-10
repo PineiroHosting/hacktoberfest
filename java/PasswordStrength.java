@@ -1,6 +1,14 @@
+import java.util.Scanner;
+
 public class PasswordStrength {
 
     public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter Password");
+        String i = s.nextLine().trim();
+
+        System.out.println("Password Score is " + passwordStrength(i));
 
     }
 
