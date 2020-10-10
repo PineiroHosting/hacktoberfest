@@ -8,11 +8,11 @@ public class PasswordStrength {
         System.out.println("Enter Password");
         String i = s.nextLine().trim();
 
-        System.out.println("Password Score is " + passwordStrength(i));
+        System.out.println("Password Score is " + passwordScore(i));
 
     }
 
-    public static int passwordStrength(String password) {
+    public static int passwordScore(String password) {
         int iPasswordScore = 0;
 
         if( password.length() < 8 )
@@ -44,5 +44,31 @@ public class PasswordStrength {
 
     }
 
+    public static PasswordStrengthLevel passwordStrength(String password) {
+        int passScore = passwordScore(password);
+        if(passScore < 3) return PasswordStrengthLevel.LOW;
+        else if (passScore < 5) return PasswordStrengthLevel.MED;
+        else return PasswordStrengthLevel.HI;
+    }
+
+
 }
+
+enum PasswordStrengthLevel {
+
+    LOW("Low"),
+    MED("Medium"),
+    HI("High");
+
+    private String name;
+
+    PasswordStrengthLevel(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
 
